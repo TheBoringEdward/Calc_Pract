@@ -18,25 +18,25 @@ public class ReMC{
 
         /*
 
+        "CV" = "class value"
+
          Decim methods:
 
-         show: shows value of class
-         get_n: returns value of class
+         show: shows CV
+         get_n: returns CV
+         set_n: sets and thereafter returns CV
          set: sets value of CV from given value
-         add: adds given value to class value
-         sub: subtracts given value of class value
-         div: divides class value into given value
-         mul: multiplies class value by given value
-         siz: checks whether class value is smaller or bigger than given value
-         gSiz: same as above, but it returns a boolean instead of String
-         sqrt: checks whether class value is a square root or not
-         gSqrt: same as above, but it returns a boolean
-         rnd: rounds class value
+         add: adds given value to CV
+         sub: subtracts given value of CV
+         div: divides CV into given value
+         mul: multiplies CV by given value
+         siz: checks whether CV is smaller or bigger than given value
+         sqrt: checks whether CV is a square root or not
+         rnd: rounds CV
          prim: checks whether CV is a prime number
-         gPrim: s.a.a., ecpt. returns boolean
 
-         Any methods that have the prefix "q" are the same as their counterpart
-            except that they make request for the value
+         Any methods that have the prefix "q" (questionnaire) are the same as their counterpart
+            except that they make request the parameters
 
         qAdd
         qSub
@@ -44,6 +44,13 @@ public class ReMC{
         qDiv
         qSiz
         qSet
+
+        Any methods that have the prefix "g"(get) are the same as their counterpart
+            except that they return something
+
+        gSqrt
+        gPrim
+        gSiz
         */
 
         System.out.print("\n\n Debugging");
@@ -66,6 +73,7 @@ public class ReMC{
         z2.rnd();
         z1.prim();
         z1.set(17);
+        z1.set_n(17);
         z1.prim();
         z1.set(127);
         z1.prim();
@@ -85,7 +93,7 @@ public class ReMC{
                 case 2 -> {
                     rb = true;
                     while (rb) {
-                        System.out.print("\n\n Commands at your disposal:\n 0: Go back\n 1: Set\n 2: Add decimal\n 3: Add fraction\n : Subtract\n : Multiply\n : Divide\n : Round\n : Compare size");
+                        System.out.print("\n\n Commands at your disposal:\n 0: Go back\n 1: Set\n 2: Add decimal\n 3: Add fraction\n 4: Shorten\n : Subtract\n : Multiply\n : Divide\n : Round\n : Compare size");
                         System.out.print("\n\n Please enter what you wish to do with b1 (" + b1.cnt() + "/" + b1.den() + "):\n");
                         a = scn2.nextInt();     //I'd do unspeakable things to b1
                         switch (a) {
@@ -96,6 +104,7 @@ public class ReMC{
                             case 1 -> b1.qSet();
                             case 2 -> b1.qAddD();
                             case 3 -> b1.qAddF();
+                            case 4 -> b1.Short();
                             default -> System.out.print("\n " + a + " is not a valid command");
                         }
                     }
@@ -133,38 +142,7 @@ public class ReMC{
                     rn = false;
                 }
             }
-
-            /*
-            if (a == 0) {
-                System.out.print("\n Quitting...");
-                rn = false;
-            }else if(a == 1){       //If only such things as lists exist...
-                z1.qSet();
-            }else if(a == 2){
-                z1.qAdd();
-            }else if(a == 3){
-                z1.qSub();
-            }else if(a == 4){
-                z1.qMul();
-            }else if(a == 5){        //I deserve to burn in hell for this...
-                z1.qDiv();
-            }else if(a == 6){
-                z1.rnd();
-            }else if(a == 7){
-                z1.sqrt();
-            }else if(a == 8){
-                z1.prim();
-            }else if(a == 9){
-                z1.qSiz();
-            }else{
-                System.out.print("\n " + a + " is not a valid command");//Using anything but integers as
-            }
-                                                                   //input crashes the entire program
-             */
         }
-
-        //		I know I'll sound like the meme. Using python for advanced Mathematics would be of a great advantage.
-        //      Pls correct me if I'm wrong tho
     }
     public static void main(String [] args){
         ReMC me = new ReMC();
@@ -172,7 +150,6 @@ public class ReMC{
         System.out.print("\n\n --This code has been provided by TheBoringEdward with the help of a great fellow-- \n\n"); //I'm being too clingy to that boi, amn't I?
     }
 }
-//TODO: add Bruch.java (Sth like Bruch b1 = new Bruch ("b1", 1, 2); for a half)
 
 //      This code has been provided by TheBoringEdward with the help of a great fellow
 //      This code is under the license of the Unlicense

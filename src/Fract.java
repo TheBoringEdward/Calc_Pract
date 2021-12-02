@@ -3,41 +3,53 @@ import java.util.Scanner;
 public class Fract {
     Scanner scn = new Scanner(System.in);
 
-    protected double c;
-    protected double d;
-    protected String name;
-    protected double i;
-    protected double j;
-    protected double k;
+    protected double n; //Numerator
+    protected double d; //Denominator
+    protected String name; //Name
+    protected double i; //Throwaway variable
+    protected double j; //Throwaway variable
+    protected double k; //Throwaway variable
 
     public Fract(String nam, double zae, double nen){
         name = nam;
-        c = zae;
+        n = zae;
         d = nen;
         i = 0;      //Grade 4 says "Hello"
         j = 0;
         k = 0;
     }
 
+    public void Short(){
+        n /= 2;
+        d /= 2;
+        if(n != Math.round(n) || d != Math.round(d)){
+            System.out.print("\n\n "+name+"("+n*2+"/"+d*2+") can't be made any shorter ("+n+"/"+d+")");
+            n *= 2;
+            d *= 2;
+        }else{
+            System.out.print("\n\n "+name+" has been shorted by half ("+n+"/"+d+")");
+        }
+    }
+
     public void qAddD(){
-        System.out.print("\n\n Please enter value to be added to "+name+" ("+ c +"/"+ d +")\n");
+        System.out.print("\n\n Please enter value to be added to "+name+" ("+ n +"/"+ d +")\n");
         i = scn.nextDouble();
         j = i * d;
-        c = c + j;  //I'm dumb
-        System.out.print("\n "+name+"'s value now is at "+ c +"/"+ d);
+        n = n + j;  //I'm dumb
+        System.out.print("\n "+name+"'s value now is at "+ n +"/"+ d);
     }
 
     public void qAddF(){
-        System.out.print("\n\n Please enter the fraction to be added to "+name+" ("+ c +"/"+ d +")");
+        System.out.print("\n\n Please enter the fraction to be added to "+name+" ("+ n +"/"+ d +")");
         System.out.print("\n Enter value for numerator\n");
         i = scn.nextDouble();
         System.out.print("\n Enter value for denominator\n");
         j = scn.nextDouble();
-        c = c *j;
+        n = n *j;
         i = i* d;
-        c = c+i;    //I'm sure there is a more efficient way
+        n = n +i;    //I'm sure there is a more efficient way
         d = d*j;    //TODO: This shit. It just won't work!!!
-        System.out.print("\n "+name+"'s value now is at "+ c +"/"+ d);
+        System.out.print("\n "+name+"'s value now is at "+ n +"/"+ d);
     }
 
     /*
@@ -49,29 +61,29 @@ public class Fract {
     public void qSet(){
         System.out.print("\n\n Please enter value to be set as "+name);
         System.out.print("\n Enter value for numerator\n");
-        c = scn.nextDouble();
+        n = scn.nextDouble();
         System.out.print("\n Enter value for denominator\n");
         d = scn.nextDouble();
-        System.out.print("\n "+name+"'s value now is "+ c +"/"+ d);
+        System.out.print("\n "+name+"'s value now is "+ n +"/"+ d);
     }
 
     public void show(){
-        System.out.print("\n\n "+name+"'s value is "+ c +"/"+ d);
-        i = c / d;
+        System.out.print("\n\n "+name+"'s value is "+ n +"/"+ d);
+        i = n / d;
         System.out.print("\n ("+i+" as a decimal)");
     }
     public double cnt(){
-        return c;
+        return n;
     }
     public double den(){
         return d;
     }
     public double dec(){
         //i = z/n;
-        return c / d;
+        return n / d;
     }
     public void sDec(){
-        System.out.print("\n\n "+name+" as a decimal is "+ c / d);
+        System.out.print("\n\n "+name+" as a decimal is "+ n / d);
     }
     public void qAdd(){
         System.out.print("\n\n Test");

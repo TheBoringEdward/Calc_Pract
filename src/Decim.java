@@ -45,12 +45,7 @@ public class Decim {
         System.out.print("\n\n Value of "+name+" is at: "+n);
         //System.out.print("\n\n Value of "+name+" is at: "+Math.sqrt(n));
     }
-    /*
-    public void sShow(){ //Show CV
-        System.out.print(n);
-        //System.out.print("\n\n Value of "+name+" is at: "+Math.sqrt(n));
-    }
-    */
+
     public void prim(){ //Weth/n CV is Prim
         for(i = 2; i <= n; i++){
             if(n == i){
@@ -58,7 +53,7 @@ public class Decim {
                 break;
             }else if(n/i == Math.round(n/i)){
                 System.out.print("\n\n "+name+" is not a prime number (Ended at "+i+")");
-                break; //Loops... Why didn't I think of this one?
+                break;
             }
         }
     }       //Couldn't have done this without help
@@ -66,17 +61,11 @@ public class Decim {
 
     public boolean gPrim(){ //Weth/n CV is Prim
         for(i = 2; i <= n; i++){
-            if(n == i){
-                return true;
-            }else {//(n/i == Math.round(n/i)){
-                return false;
-            }
+            //(n/i == Math.round(n/i)){
+            return n == i;
         }
         return false;
     }
-          //Can't get this to work somehow. Smth about the last curly bracket is off
-
-    //Block comments are hella useful.
 
     public void rnd(){ //Round CV
         System.out.print("\n\n Rounding "+name+" ("+n+")");
@@ -99,7 +88,7 @@ public class Decim {
 
     public void sub(double s){ //Subtract from CV
         System.out.print("\n\n Subtracting "+s+" from "+name);
-        n = n - s;
+        n -= s;
         System.out.print("\n\n Value of "+name+" now is at: "+n);
     }
     public void qSub(){ //Subtract from CV
@@ -163,10 +152,7 @@ public class Decim {
     }
 
     public boolean gSqrt(){ //Same as above
-        //WHY?!?!?
         return Math.round(Math.sqrt(n)) == Math.sqrt(n);
     }
 
 }
-
-//TODO: Make gPrim work
