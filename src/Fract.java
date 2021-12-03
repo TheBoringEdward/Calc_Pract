@@ -19,6 +19,8 @@ public class Fract {
         k = 0;
     }
 
+    //Test
+
     public void Short(){
         n /= 2;
         d /= 2;
