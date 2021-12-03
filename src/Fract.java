@@ -50,7 +50,7 @@ public class Fract {
         n = n *j;
         i = i* d;
         n = n +i;    //I'm sure there is a more efficient way
-        d = d*j;    //TODO: This shit. It just won't work!!!
+        d = d*j;    //TODO: This shit. It just won't work. I forgot 4th grade math... I'm an idiot.
         System.out.print("\n "+name+"'s value now is at "+ n +"/"+ d);
     }
 
