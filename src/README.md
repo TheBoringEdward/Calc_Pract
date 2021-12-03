@@ -1,7 +1,7 @@
 There are some issues to fix, like giving some methods a return value. Not sure if I wanna continue
 to work on the Fract class.
     -Edward 2130 01.12.21
-
+***
 Hallo Kilian,
 
 das ist sehr schoen. Hier ein paar Anmerkungen, damit dir morgen nicht langweilig wird.
@@ -35,9 +35,10 @@ Liebe Gruesse
 
 Klaus Wiele
     -Dr. Wiele ???? 30.11.21
-
+***
 Have to do some documentation and clean up the code. Fixed most of the above mentioned issues.
     -Edward 1821 2.12.21
 
 Cleaned it, still gotta add documentation
     -Edward 1834 2.12.21
+***
