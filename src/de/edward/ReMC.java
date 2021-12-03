@@ -1,3 +1,5 @@
+package de.edward;
+
 import java.util.Scanner;
 
 public class ReMC{
@@ -114,7 +116,7 @@ public class ReMC{
                     while (rt) {
                         System.out.print("\n\n Commands at your disposal:\n 0: Go back\n 1: Set\n 2: Add\n 3: Subtract\n 4: Multiply\n 5: Divide\n 6: Round\n 7: Check for quadrant\n 8: Check for prime\n 9: Compare size");
                         System.out.print("\n\n Please enter what you wish to do with z1 (" + z1.get_n() + "):\n");
-                        a = scn2.nextInt();     //I'd do unspeakable things to z1
+                        a = scn2.nextInt();
 
                         switch (a) {
                             case 0 -> {

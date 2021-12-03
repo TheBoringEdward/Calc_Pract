@@ -1,3 +1,5 @@
+package de.edward;
+
 import java.util.Scanner;
 
 public class Fract {
@@ -81,7 +83,6 @@ public class Fract {
         return d;
     }
     public double dec(){
-        //i = z/n;
         return n / d;
     }
     public void sDec(){
