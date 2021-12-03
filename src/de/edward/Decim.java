@@ -1,3 +1,5 @@
+package de.edward;
+
 import java.util.Scanner;
 
 public class Decim {

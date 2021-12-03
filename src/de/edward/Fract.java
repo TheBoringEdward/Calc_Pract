@@ -1,3 +1,5 @@
+package de.edward;
+
 import java.util.Scanner;
 
 public class Fract {
@@ -18,6 +20,8 @@ public class Fract {
         j = 0;
         k = 0;
     }
+
+    //Test
 
     public void Short(){
         n /= 2;
@@ -48,7 +52,7 @@ public class Fract {
         n = n *j;
         i = i* d;
         n = n +i;    //I'm sure there is a more efficient way
-        d = d*j;    //TODO: This shit. It just won't work!!!
+        d = d*j;    //TODO: This shit. It just won't work. I forgot 4th grade math... I'm an idiot.
         System.out.print("\n "+name+"'s value now is at "+ n +"/"+ d);
     }
 
@@ -79,7 +83,6 @@ public class Fract {
         return d;
     }
     public double dec(){
-        //i = z/n;
         return n / d;
     }
     public void sDec(){
