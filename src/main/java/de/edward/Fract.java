@@ -3,6 +3,7 @@ package de.edward;
 import java.util.Scanner;
 
 public class Fract {
+
     Scanner scn = new Scanner(System.in);
 
     protected double n; //Numerator
@@ -20,8 +21,6 @@ public class Fract {
         j = 0;
         k = 0;
     }
-
-    //Test
 
     public void Short(){
         n /= 2;
@@ -58,7 +57,7 @@ public class Fract {
 
     /*
     a   c   a*d + c*b
-      +   =                 eh
+      +   =                 eh, doesn't work reliably
     b   d      b*d
      */
 
