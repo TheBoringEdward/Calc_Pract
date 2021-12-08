@@ -47,7 +47,7 @@ den: returns denominator\
 dec: returns fraction as a decimal\
 sDec: shows fraction as a decimal\
 qAddD: adds decimal to fraction\
-short: shortens fraction by half, if possible (it's  not very efficient, i know)\
+short: shortens fraction by half, if possible (it's  not very efficient, i know)
 
 To be fixed:
 
