@@ -80,7 +80,7 @@ public class Fract {
     }
     public double den(){
         return d;
-    }
+    } //Cant make a double double
     public double dec(){
         return n / d;
     }

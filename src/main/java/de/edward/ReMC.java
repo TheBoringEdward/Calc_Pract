@@ -16,7 +16,7 @@ public class ReMC{
 
         boolean rn = true;
         boolean rt = true;
-        boolean rb = true;
+        boolean rb = true; //why is it redundant, tho?
 
         /*
         See documentation in DOCUMENTATION.md
